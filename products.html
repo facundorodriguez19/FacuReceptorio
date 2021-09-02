@@ -21,19 +21,57 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a class="py-2 d-none d-md-inline-block" id="perfil" href="my-profile.html"></a>
       </div>
     </nav>
+    <main role="main" class="pb-5">
     <div class="text-center p-4">
       <h2>Productos</h2>
-      <p class="lead">Verás aquí todos los Productos del sitio.</p>
+      <p class="lead"><strong>Lás aquí todos los Productos del sitio.</strong></p>
   </div>
-  <div class="pb-5">
     <div class="container">
+      <div class="row">
+        <div class="col text-right">
+            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                <label class="btn btn-light active" id="sortProductASC">
+                    <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-sort-amount-down mr-1"></i><strong>$</strong>
+                </label>
+                <label class="btn btn-light" id="sortProductDESC" >
+                    <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-up-alt mr-1"></i><strong>$</strong>
+                </label>
+                <label class="btn btn-light" id="sortProductCount" >
+                    <input type="radio" name="options" autocomplete="off"><strong>Mas Vendido</strong>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-md-6"></div>
+        <div class="col-md-6 col-sm-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-right my-2"><strong>Cantidad:</strong></p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="minimo" id="rangoFiltroMinimoCount">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máximo" id="rangoFiltroMaximoCount">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangoFiltroCount"><strong>Filtrar</strong></button>
+                <button class="btn btn-link btn-sm" id="borrarRangoFiltro"><strong>Limpiar</strong></button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
        <div class="row">
          <div class="list-group" id="product-list-container"></div>
        </div>
       </div>
-     </div>
+    </main>
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">

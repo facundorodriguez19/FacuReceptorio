@@ -37,28 +37,49 @@
   </style>
 </head>
 <body>
-	<div class="login">
-		<div class="login-screen">
-			<div class="app-title">
-				<h1>Sing In</h1>
-			</div>
+    
+  <header class="bg_animate">
+    <div class="banner_img">
+        <img src="../FacuReceptorio/img/login.png" alt="">
+    </div>
+    <section class="banner contenedor">
+       <secrion class="banner_title">
+            <div class="login">
+                
+                <div class="login-screen">
+                    <div class="login-form">
+                        <div class="control-group">
+                        <input type="text"  placeholder="Usuario" id="nombre" maxlength="8" required>
+                        <label for="login-name"></label>
+                        </div>
+        
+                        <div class="control-group">
+                        <input type="password"  placeholder="Contraseña" id="pw" maxlength="8" required>
+                        <label for="login-pass"></label>
+                        </div>
+        
+                    <button class="boton" type="button" onclick="validar()">Iniciar</button>
+                    
+                    </div>
+                </div>
+            </div>
+        </secrion>
+        
+       
 
-			<div class="login-form">
-				<div class="control-group">
-				<input type="text" value="" placeholder="Usuario" id="login-name">
-				<label for="login-name"></label>
-				</div>
-
-				<div class="control-group">
-				<input type="password"value="" placeholder="Contraseña" id="login-pass">
-				<label for="login-pass"></label>
-				</div>
-
-				<a class="btn" href="home.html">Enter</a>
-			
-			</div>
-		</div>
-	</div>
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+</header>
   
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
