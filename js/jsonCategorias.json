@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Autos",
+        "description": "Los mejores precios en autos 0 kilómetro, de alta y media gama.",
+        "productCount": "122",
+        "imgSrc": "img/cat1.jpg"
+    },
+    {
+        "name": "Buses",
+        "description": "Encuentra aquí los mejores Buses para conducir.",
+        "productCount": "354",
+        "imgSrc": "img/cat2.jpg"
+    },
+    {
+        "name": "Camiones",
+        "description": "Encuentra aquí las mejores camionetas 0 kilometro!!.",
+        "productCount": "157",
+        "imgSrc": "img/cat3.jpg"
+    },
+    {
+        "name": "Casas Rodantes",
+        "description": "Compra una y Viaja en Familia!!!.",
+        "productCount": "452",
+        "imgSrc": "img/cat4.jpg"
+    },
+    {
+        "name": "Maquinarias",
+        "description": "Todo para hacer los mejores trabajos y con los mejores cuidados",
+        "productCount": "724",
+        "imgSrc": "img/cat5.jpg"
+    },
+    {
+        "name": "Motos",
+        "description": "Los mejores precios de motos para los fans de las dos ruedas",
+        "productCount": "841",
+        "imgSrc": "img/cat6.jpg"
+    },
+    {
+        "name":"Nautica",
+        "description": "Las mejores lanchas para viajar por el agua!!",
+        "productCount": "84",
+        "imgSrc": "img/cat7.jpg"
+    },
+    {
+        "name": "deportivo",
+        "description": "Quieres algo que imprecione, ve nuestros mejores autos.",
+        "productCount": "574",
+        "imgSrc": "img/cat8.jpg"
+    },
+    {
+        "name": "Station Wagon",
+        "description": "Es como una camioneta pero mas familiar, echale un vistazo!!",
+        "productCount": "124",
+        "imgSrc": "img/cat9.jpg"
+    }
+]

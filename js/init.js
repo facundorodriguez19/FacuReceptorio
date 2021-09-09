@@ -48,10 +48,18 @@ function getUsuario(){
   if(name!= undefined && name != " "){
     document.getElementById("perfil").innerHTML +=""+name;
   }
+ perfilSM
+}
+function getUsuarioPantallaSM(){
+  let name = localStorage.getItem("user");
+  if(name!= undefined && name != " "){
+    document.getElementById("perfilSM").innerHTML +=""+name;
+  }
  
 }
 
 getUsuario();
+getUsuarioPantallaSM();
 document.addEventListener("DOMContentLoaded", function(e){
-
+ 
 });

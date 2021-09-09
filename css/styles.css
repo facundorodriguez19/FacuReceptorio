@@ -19,11 +19,113 @@
   color: black;
   font-weight: bold;
 }*/
+body{
+  background: white;
+}
+.py-5{
+  background: white;
+}
+.btn-light{
+  background-color: white !important;
+}
+h1{
+  margin-bottom: 40px;
+}
+.glider-slide img {
+  border: 2px solid white;
+}
+
+.py-2{
+  padding-top: 0.5vw !important;
+  padding-bottom: 0.5vw !important;
+}
+.row{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.py-1{
+  padding-top: 0.5vw!important;
+}
+.fixed-top-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
 .m-5{
   margin: 0rem !important;
 }
+.p-4{
+  padding: 4vw !important;
+  margin-bottom: -3vw;
+}
+.bg-black{
+  background-color: #000000;
+}
+.bg-black-nav{
+  background-color: rgb(21 21 21 / 65%);
+}
+.imgPrincipal{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.imagenPrincial{
+    vertical-align: top;
+    width: 100%; 
+    margin-bottom: -10.5vw;
+}
+.titulo-texto-nav{
+  font-size: 1.9rem !important;
 
-@media (min-width: 768px) {
+}
+.texto-imagen{
+  position: absolute;
+  bottom: 39vw;
+  left: 1vw;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5vw;
+  color: white;
+  border-bottom: solid white;
+  -webkit-text-stroke: 1px black;
+}
+/*
+.texto2-imagen{
+  position: absolute;
+  bottom: 30vw;
+  left: 1vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 6vw;
+  color: white;
+}
+.texto3-imagen{
+  position: absolute;
+  bottom: 24vw;
+  left: 10vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  font-size: 4vw
+}*/
+
+.card{
+  border: 3px solid rgba(0,0,0,.125);
+}
+.colorLetra{
+  text-decoration: inherit;
+  color: white !important;
+}
+li{
+  margin-bottom: 10px;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 10px
+}
+.precio-slaider{
+  
+}
+
+@media (min-width: 425px) {
   .jumbotron {
     /*padding-top: 6rem;
     padding-bottom: 6rem;*/
@@ -63,6 +165,7 @@ footer p {
 .site-header a {
   color: rgb(255, 255, 255);
   transition: ease-in-out color .15s;
+  font-size: 0.9vw;
 }
 
 .light-text {
@@ -148,7 +251,7 @@ a.custom-card:hover {
 .bg_animate{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #005C98, #505BDA);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 10%, #ff7f00 90%);
     position: relative;
     overflow: hidden;
 }
@@ -182,23 +285,16 @@ a.custom-card:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+
 }
 
-.banner_title h2{
-    color: #fff;
-    font-size: 60px;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
 
-.banner_title .llamanos{
+.banner_title {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
     display: inline-block;
-    background: #1A2849;
-    padding: 20px;
+    width: 100%;
 }
 
 .banner_img{
@@ -206,11 +302,17 @@ a.custom-card:hover {
 }
 
 .banner_img img{
-    width: 650px;
-    margin-left: 630px;
-    margin-top: 50px;
-    display: block;
-    border-radius: 50px;
+  width: 50%;
+  margin-top: 5vw;
+  margin-left: 25vw;
+  display: block;
+  border-radius: 50px;
+}
+.text-muted{
+  background: white;
+}
+.text-abajo{
+  background: white;
 }
 
 /* burbujas */
@@ -218,7 +320,7 @@ a.custom-card:hover {
 .burbuja{
     border-radius: 50%;
     background: #fff;
-    opacity: .3;
+    opacity: .5;
 
     position: absolute;
     bottom: -150;
@@ -336,9 +438,9 @@ a.custom-card:hover {
     }
 }
 .login {
-    margin-left: 700px;
-    margin-bottom: 600px;
-    width: 500px;
+  margin-top: 5vw;
+  margin-bottom: 40vw;
+  width: 100%;
     }
     .login-screen {
     background-color: #f8f9fa00;
@@ -396,3 +498,6 @@ a.custom-card:hover {
     .boton:hover {
       background-color: #2980B9;
     }
+    
+    
+    

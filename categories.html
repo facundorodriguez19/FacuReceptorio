@@ -15,33 +15,59 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="site-header sticky-top py-1 bg-dark">
+    <nav class="site-header fixed-top-nav py-1 bg-black-nav d-none d-lg-block">  
       <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-        <a class="py-2 d-none d-md-inline-block"  id="perfil"  href="my-profile.html"></a>
+        <a class="py-2 d-none d-md-inline-block barraAzul"  id="perfil"  href="my-profile.html">Bienvenido </a>
+      </div>
+    </nav>
+    <nav class="navbar navbar-dark d-flex bg-black d-block d-lg-none">
+      <a class="navbar-brand titulo-texto-nav" href="home.html">E commerce</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" 
+      data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="true" 
+      aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="py-2 .d-none .d-sm-block  colorLetra" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="py-2 .d-none .d-sm-block  colorLetra" href="products.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="py-2 .d-none .d-sm-block  colorLetra" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <a class="py-2 .d-none .d-sm-block  colorLetra" href="cart.html">Mi carrito</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <main role="main" class="pb-5">
         <div class="text-center p-4">
             <h2>Categorías</h2>
-            <p class="lead">Verás aquí todas las categorías del sitio.</p>
+            <p class="lead"><strong>ás aquí todas las categorías del sitio:</strong></p>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col text-right">
                     <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                         <label class="btn btn-light active" id="sortAsc" >
-                            <input type="radio" name="options" autocomplete="off" checked>A-Z
+                            <input type="radio" name="options" autocomplete="off" checked><strong>A-Z</strong>
                         </label>
                         <label class="btn btn-light" id="sortDesc" >
-                            <input type="radio" name="options" autocomplete="off">Z-A
+                            <input type="radio" name="options" autocomplete="off"><strong>Z-A</strong>
                         </label>
                         <label class="btn btn-light" id="sortByCount" >
-                            <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Cant.
+                            <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i><strong>Mas Vendido</strong>
                         </label>
                     </div>
                 </div>
@@ -51,7 +77,7 @@
                 <div class="col-md-6 col-sm-12 mb-1 container">
                   <div class="row container p-0 m-0">
                     <div class="col">
-                      <p class="font-weight-normal text-right my-2">Cant.</p>
+                      <p class="font-weight-normal text-right my-2"><strong>Cantidad:</strong></p>
                     </div>
                     <div class="col">
                       <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
@@ -61,20 +87,17 @@
                     </div>
                     <div class="col-3 p-0">
                       <div class="btn-group" role="group">
-                        <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                        <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                        <button class="btn btn-light btn-block" id="rangeFilterCount"><strong>Filtrar</strong></button>
+                        <button class="btn btn-link btn-sm" id="clearRangeFilter"><strong>Limpiar</strong></button>
                       </div>
                     </div>
                   </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="list-group" id="cat-list-container">
-                </div>
-            </div>
+                <div class="list-group" id="cat-list-container"></div>
         </div>
     </main>
-    <footer class="text-muted bg-light">
+    <footer class="text-abajo bg-light">
       <div class="container">
         <p class="float-right">
           <a href="#">Volver arriba</a>

@@ -60,8 +60,8 @@ function showListaProduct(){
         ListaDeProduct += `
             <a href="product-info.html" class="list-group-item list-group-item-action">
                 <div class="row">
-                    <div class="col-3">
-                        <img src="${product.imgSrc}"  alt=" ${product.description}" class="img-thumbnail">
+                    <div class="col-md-4">
+                        <img src="${product.imgSrc}"  alt=" ${product.description}" class="img-thumbnail bd-placeholder-img card-img-top">
                     </div>
                     <div class="col">
                         <div class="d-flex w-100 justify-content-between">
