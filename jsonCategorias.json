@@ -2,25 +2,25 @@
     {
         "name": "Autos",
         "description": "Los mejores precios en autos 0 kilómetro, de alta y media gama.",
-        "productCount": "122",
+        "productCount": "3",
         "imgSrc": "img/cat1.jpg"
     },
     {
         "name": "Buses",
         "description": "Encuentra aquí los mejores Buses para conducir.",
-        "productCount": "354",
+        "productCount": "3",
         "imgSrc": "img/Buses2-2.png"
     },
     {
         "name": "Camiones",
         "description": "Encuentra aquí las mejores camiones 0 kilometro!!.",
-        "productCount": "157",
+        "productCount": "3",
         "imgSrc": "img/Camiones1-1.png"
     },
     {
         "name": "Casas Rodantes",
         "description": "Compra una y Viaja en Familia!!!.",
-        "productCount": "452",
+        "productCount": "3",
         "imgSrc": "img/Motorhome1-1.png"
     },
     {
@@ -48,7 +48,7 @@
         "imgSrc": "img/Deportivo1-1.png"
     },
     {
-        "name": "Autos 4x4",
+        "name": "Camionetas 4x4",
         "description": "Tienen un motor muy bueno para terrenos rocozos, echale un vistazo!!",
         "productCount": "124",
         "imgSrc": "img/Camioneta_4x41-1.png"

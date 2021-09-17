@@ -52,14 +52,74 @@
       </ul>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main role="main">
+    <div class="container">
+      <div class="text-center p-4">
+        <h2>Descripción del Producto</h2>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Precio</dt>
+        <dd>
+          <h5 style="display: inline-block;" id="productCost"></h5><div style="display: inline-block;font-weight: bold; margin-left: 1vw;" id="productCurrency"></div>
+        </dd>
+        <dt>Cantidad de productos en la categoría</dt>
+        <dd>
+          <p id="productSoldCount"></p>
+        </dd>
+        <dt>Categoría del Producto</dt>
+        <dd>
+          <p id="productCategory"></p>
+        </dd>
+  
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="img_InfoProductos">
+          </div>
+        </dd>
+      </dl>
+      <h2>Comentarios:</h2>
+      <div id="commentsInfo"></div>
+      <div id="comentarios"></div>
+      <button id="btn-abrir-popup">Agregar Un Comentario</button>
     </div>
-  </div>
+    
+    
+    <div id="container">
+      
+        <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+        <form id="formulario">
+          <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <h3 for="textarea">Danos Tu Opinion:</h3>
+        <textarea class="form-control" id="textarea" rows="5" 
+        ></textarea>
+     
+      <div class="form-group">
+        <h4 for="score" style="margin-top: 1vw;margin-bottom: 1vw;">Elije Una Calificacion:</h4>
+        <select class="form-control" id="score">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+       </select>
+      </div>
+      <button  type="button" class=" btn-submit" onclick="saveComment()">Comentar</button>
+     </form>
+    </div>
+      </div>
+    </div>
+
+  </main>
+  
+  
   <footer class="text-abajo">
     <div class="container">
       <p class="float-right">

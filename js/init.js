@@ -65,3 +65,8 @@ getUsuarioPantallaSM();
 document.addEventListener("DOMContentLoaded", function(e){
  
 });
+
+
+//Buscador
+
+
