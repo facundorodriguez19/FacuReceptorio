@@ -1,0 +1,24 @@
+[
+    {
+        "name": "2018 Chevrolet N300 Max 1.2 Van",
+        "description": "Color: BLANCO INVIERNO, Combustible: GASOLINA, Alzavidrios delanteros manuales √, Asiento del conductor deslizable y reclinable en profundidad √, Cenicero y encendedor √",
+        "cost": 8.500000,
+        "currency": "USD",
+        "imgSrc": "img/camioneta1-1.png"
+    },
+    {
+        "name": "2021 Maxus T60 GLX AT 2.8",
+        "description": "Cero Km, súper oferta año 2021, precio solo con financiamiento BK max 40% de pie min 24 cuotas",
+        "cost": 20.218100 ,
+        "currency": "USD",
+        "imgSrc": "img/camioneta2-1.png"
+    },
+    {
+        "name": "2021 Chevrolet SILVERADO LTZ 5.3L",
+        "description": "PRECIO PUBLICADO CON OPCION DE COMPRA INTELIGENTE DIRECTO CON GENERAL MOTORS FINANCIAL, CONSULTE ALTERNATIVAS Y DISPONIBILIDAD DE STOCK Y COLORES",
+        "cost": 44.613100,
+        "currency": "USD",
+        "imgSrc": "img/camioneta3-4.png"
+      }
+
+]

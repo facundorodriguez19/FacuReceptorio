@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Chevrolet Onix Joy",
+        "description": "Generación 2019, variedad de colores. Motor 1.0, ideal para ciudad.",
+        "cost": 13500,
+        "currency": "USD",
+        "imgSrc": "img/car1-1.png",
+        "soldCount": 14
+    },
+    {
+        "name": "Fiat Way",
+        "description": "La versión de Fiat que brinda confort y a un precio accesible.",
+        "cost": 14500,
+        "currency": "USD",
+        "imgSrc": "img/car2-2.png",
+        "soldCount": 52
+    },
+    {
+        "name": "Suzuki Celerio",
+        "description": "Un auto que se ha ganado la buena fama por su economía con el combustible.",
+        "cost": 12500,
+        "currency": "USD",
+        "imgSrc": "img/car3-3.png",
+        "soldCount": 25
+    },
+    {
+        "name": "Peugeot 208",
+        "description": "El modelo de auto que se sigue renovando y manteniendo su prestigio en comodidad.",
+        "cost": 15200,
+        "currency": "USD",
+        "imgSrc": "img/car4-4.png",
+        "soldCount": 17
+    },
+    {
+        "name": "Honda Civic",
+        "description": "El modelo de auto es cómodo, gasta poco combustible y es divertido.",
+        "cost": 20680,
+        "currency": "USD",
+        "imgSrc": "img/car5-5.jpg",
+        "soldCount": 40
+    },
+    {
+        "name": "Honda CR-V",
+        "description": "El modelo de auto es un SUV que se conduce como un automóvil.",
+        "cost": 25150,
+        "currency": "USD",
+        "imgSrc": "img/car6-6.jpg",
+        "soldCount": 34
+    },
+    {
+        "name": "BMW Serie 3",
+        "description": "El modelo de auto va más allá que el promedio y derrocha tecnología.",
+        "cost": 41750,
+        "currency": "USD",
+        "imgSrc": "img/car7-7.jpg",
+        "soldCount": 8
+    },
+    {
+        "name": "Nissan Leaf",
+        "description": "El modelo de auto hace bien al medio ambiente y tu billetera.",
+        "cost": 30885,
+        "currency": "USD",
+        "imgSrc": "img/car8-8.png",
+        "soldCount": 15
+    }
+
+]
