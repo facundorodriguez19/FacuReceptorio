@@ -95,7 +95,8 @@ function sortYshowProductos(sortCriterio, productArray){
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(CATEGORY_PRODUCTS).then(function(resultObj){ 
+    let urlProducts = CATEGORY_PRODUCTS + localStorage.getItem("category") + ".json";
+    getJSONData(urlProducts).then(function(resultObj){ 
         if (resultObj.status === "ok"){
           sortYshowProductos(Orden_ASC_BY_Cost, resultObj.data);
          }   

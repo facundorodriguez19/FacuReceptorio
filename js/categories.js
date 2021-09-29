@@ -45,7 +45,7 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
 
             htmlContentToAppend += `
-            <div class="list-group-item list-group-item-action" id="${i}">
+            <div class="list-group-item list-group-item-action" id="${i}" onclick='showProductsCategory(${i});'>
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -66,19 +66,19 @@ function showCategoriesList(){
 
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
     }
-    for (let i = 0; i < currentCategoriesArray.length; i++) {
-        document.getElementById(i).addEventListener("click", function
-        (e) {
-            showProducts(CATEGORY_PRODUCTS + i +".json");
-        })
-        
-    }
-
+    
 
 }
+function showProductsCategory(id){
+    localStorage.setItem("category",id);
+    window.location.href="./products.html"
+
+}
+
 function showProducts(url) {
     getJSONData(url).then(result= result.data);
 }
+
 
 
 

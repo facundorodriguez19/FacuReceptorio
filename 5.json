@@ -1,22 +1,22 @@
 [
     {
         "name": "2017 Forest River Salem",
-        "description": "AUTOMOTORA QUEIROLO CON MAS DE 40 AÑOS DE EXPERIENCIA, CON EL MAYOR STOCK EN SUV Y 4X4",
-        "cost": 35.990000,
+        "description": "Automotora queirolo con mas de 40 años de experiencia, con el mayor stock en suv y 4x4",
+        "cost": 35990000,
         "currency": "USD",
         "imgSrc": "img/casa-1-1.png"
     },
     {
         "name": "Mercedes-Benz Sprinter 2014",
-        "description": "MOTORHOME AMERICANA  EN PERFECTO ESTADO, EQUIPADA AL 100% CON CAPACIDAD PARA 6 PERSONAS, FRENOS ABS ARS, TRACCION TRASERA, AIRE ACONDICIONADO CONTROL CLIMATICO, CALEFACCION CENTRAL, CAJA DE CAMBIO AUTOMATICA, CONTROL CRUCERO, AIRBAG PILOTO Y COPILOTO, NEBLINEROS, BATERIAS VEHICULO Y BATERIAS SERVICIO, HORNO, LAVAPLATO, ESTRACTOR COCINA, COCINA GAS, RADIO CON BLUETOOTH, CAMA SUPERIOR 2 PER. ",
-        "cost": 73.900000,
+        "description": "Motorhome americana  en perfecto estado, equipada al 100% con capacidad para 6 personas, frenos abs ars, traccion trasera, aire acondicionado control climatico, calefaccion central, caja de cambio automatica, control crucero, airbag piloto y copiloto, neblineros, baterias vehiculo y baterias servicio, horno, lavaplato, estractor cocina, cocina gas, radio con bluetooth, cama superior 2 per. ",
+        "cost": 73900000,
         "currency": "USD",
         "imgSrc": "img/casa-2-2.png"
     },
     {
         "name": "Fiat Ducato 6 personas 2020",
         "description": "Motorhome Diesel Fiat Ducato para 6 personas modelo perfilado con cama elevadora electrica sobre el comedor año 2020 llegando fines de Diciembre,refrigerador calefaccion aire acondicionado de cabina,baño con ducha,agua caliente ",
-        "cost": 55.500000,
+        "cost": 55500000,
         "currency": "USD",
         "imgSrc": "img/casa-3-1.png"
       }

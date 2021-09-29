@@ -2,21 +2,21 @@
     {
         "name": "2016 BMW S1000 Rr",
         "description": "mpecables condiciones, sin caídas, funcionan todos sus elementos, mantenciones al día. Se encuentra con todos su documentación al día y sin problemas de multas.",
-        "cost": 14.490000,
+        "cost": 14490000,
         "currency": "USD",
         "imgSrc": "img/moto1-1.png"
     },
     {
         "name": "Yamaha Mt-10 2020",
         "description": "Vendo Yamaha MT-10, esta como nueva, solo 2300km, mantención de los 1000km realizada, papeles al día, foco trasero con intermitente integrados, esta con sellado cerámico completo, tengo las 3 llaves, manuales, también se entrega foco original y cola. Guardada en subterráneo.",
-        "cost": 13.000000,
+        "cost": 13000000,
         "currency": "USD",
         "imgSrc": "img/moto2-1.png"
     },
     {
         "name": "2019 BMW R 1250 Gsa",
         "description": "MODELO LOW KIT, El nuevo motor de distribución variable ShiftCam actúa sobre las válvulas de admisión variando los tiempos de apertura y extrae al motor de cilindros opuestos un total de 136 CV y 143 Nm de par motor, unas cifras notablemente más alta que las anteriores (125 CV y 125 Nm) paquete Confort (control de presión de neumáticos y puños calefactables ), el paquete Dinámico (cambio semiautomático, intermitentes LED, luz diurna y modos de conducción Pro) y el paquete Touring (arranque sin llave, control de crucero, Dynamic ESA y luces antiniebla",
-        "cost": 19.990000 ,
+        "cost": 19990000 ,
         "currency": "USD",
         "imgSrc": "img/moto3-1.png"
       }

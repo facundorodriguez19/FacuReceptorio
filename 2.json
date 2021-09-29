@@ -1,22 +1,22 @@
 [
     {
         "name": "Beiben 2543 Aljibe 20m3 2021",
-        "description": "MOTOR WP12.430, Potencia 430, Configuración 6x4, Capacidad 20m3, Equipado con RETARDADOR ",
-        "cost": 82.500000 ,
+        "description": "MOTOR WP12.430, Potencia 430, Configuración 6x4, Capacidad 20m3, Equipado con Retardador ",
+        "cost": 82500000 ,
         "currency": "USD",
         "imgSrc": "img/camion1-2.png"
     },
     {
         "name": "2020 Beiben 1635",
         "description": "Distancia entre Ejes 4.800 mm, Peso vacio (Tara) 7.500 kg,Motor Marca:Weichai licencia MAN, Modelo WP10.310，6 cilindros 9.726 cc, Turbo Intercooler, Inyección",
-        "cost": 20.218100 ,
+        "cost": 20218100 ,
         "currency": "USD",
         "imgSrc": "img/camion2-4.png"
     },
     {
         "name": "2011 Mercedes-Benz Actros 4144 K",
         "description": "Tipo Vehículo : Aljibe 30.000Lts Presurizado, Año : 2011, Marca : MERCEDES BENZ, Modelo : 4144K, Color : AMARILLO, Combustible : DIESEL, Kilometros: 172.395",
-        "cost": 38.900000,
+        "cost": 38900000,
         "currency": "USD",
         "imgSrc": "img/camion3-1.png"
       }
