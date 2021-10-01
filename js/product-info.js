@@ -1,10 +1,27 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
+var listadeProductos = [];
+//----------------------
 var arrayInfoProduct = {};
+//--------------------
 var arrayCommits = [];
 var commitarray = [];
 
+function motrarRelacionados(lista){
+  let html = "";
+  for(let i = 0; i< lista.length; i++){
+    let relacionado = lista[i];
+    
+    html +=`
+<div class="card" style="width: 14rem;">
+  <img class="card-img-top" src="${listadeProductos[relacionado].imgSrc}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><strong>${listadeProductos[relacionado].name}</strong></h5>
+    <p class="card-text">${listadeProductos[relacionado].description}</p>
+    <a href="#" class="btn btn-primary">Ver mas!</a>
+  </div>
+</div>`
+  }
+  document.getElementById("relacionados").innerHTML = html;
+  }
 
 function showimagesProduct(arreglo){
 
@@ -17,37 +34,44 @@ function showimagesProduct(arreglo){
             <div class="d-block mb-4 h-100">
                 <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
             </div>
-        </div>
-        
-                              `                              
+        </div> `                              
     }
     
 }
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCT_INFO_URL).then(function(resultObj) {
-        if(resultObj.status === "ok"){
+        
+        getJSONData(PRODUCTS_URL).then(respuesta1 =>{
+            if (respuesta1.status === "ok") {
+              listadeProductos = respuesta1.data;
+        getJSONData(PRODUCT_INFO_URL).then(function(resultObj) {
+                if(resultObj.status === "ok"){
+                   arrayInfoProduct = resultObj.data;
+                   
 
-            arrayInfoProduct = resultObj.data;
-            
             let productNameHTML  = document.getElementById("productName");
             let productDescriptionHTML = document.getElementById("productDescription");
             let productCostHTML = document.getElementById("productCost");
             let productCurrencyHTML = document.getElementById("productCurrency");
             let productSoldCountHTML = document.getElementById("productSoldCount");
-            let productCategoryHTML = document.getElementById("productCategory");
+            
         
             productNameHTML.innerHTML = arrayInfoProduct.name;
             productDescriptionHTML.innerHTML = arrayInfoProduct.description;
             productCostHTML.innerHTML = arrayInfoProduct.cost;
             productCurrencyHTML.innerHTML = arrayInfoProduct.currency;
             productSoldCountHTML.innerHTML = arrayInfoProduct.soldCount;
-            productCategoryHTML.innerHTML = arrayInfoProduct.category;
+           
+            
             
             showimagesProduct(arrayInfoProduct.images);
+            motrarRelacionados(arrayInfoProduct.relatedProducts)
+            }
+        });
            
         }
     })
 });
+
 
 
 function commitesProduct(){
@@ -141,12 +165,13 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (resultObj.status === "ok"){
             commitarray = resultObj.data;
             commitesProduct(commitarray);
-          
         }
-       
-    })
-
+    });
 });
+
+
+
+// -------------------------------------------
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
 	overlay = document.getElementById('overlay'),
 	popup = document.getElementById('popup'),

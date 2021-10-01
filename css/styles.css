@@ -47,10 +47,10 @@ h1{
   margin-bottom: -3vw;
 }
 .bg-black{
-  background-color: rgb(21 21 21 / 70%);
+  background-color: rgb(0 0 0 / 100%);
 }
 .bg-black-nav{
-  background-color: rgb(21 21 21 / 70%);
+  background-color: rgb(0 0 0 / 70%);
   height: 5vw;
 }
 .imgPrincipal{
@@ -83,6 +83,23 @@ h1{
 .titulo-texto-nav{
   font-size: 1.9rem !important;
 
+}
+.btn_perfil{
+  color: white;
+  background-color: transparent;
+  border: 1px white;
+  margin-right: -3vw;
+  margin-left: -3vw;
+}
+.dropdown-menu{
+  color: white;
+  background-color: rgb(0 0 0 / 70%)
+}
+.dropdown-item{
+  color: white !important;
+}
+.btn-group{
+  top: 10px;
 }
 .texto-imagen{
   position: absolute;
@@ -164,9 +181,7 @@ footer p {
   color: white;
 }
 
-.site-header .dropdown-menu a {
-  color: black;
-}
+
 
 .dropzone{
   border: 2px dashed #0087F7;
