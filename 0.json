@@ -8,6 +8,30 @@
         "soldCount": 14
     },
     {
+        "name": "2016 Renault FLUENCE FLUENCE AUTENTIQUE 1.6",
+        "description": "Tenemos más de 1400 vehículos en stock, con Crédito hasta 48 meses - recibimos tu auto en parte de pago.",
+        "cost": 75400,
+        "currency": "USD",
+        "imgSrc": "img/auto-1-4.png",
+        "soldCount": 34
+    },
+    {
+        "name": "2021 Citroën C5 AIRCROSS Diesel 1.5 Automatico Full",
+        "description": "Espectacular Nuevo Modelo SUV Automático Diésel Máximo Equipo y Economía  Financiamiento Directo",
+        "cost": 22990,
+        "currency": "USD",
+        "imgSrc": "img/auto-2-1.png",
+        "soldCount": 8
+    },
+    {
+        "name": "110 Peugeot 2008 Vehículos",
+        "description": "AUTOMATICO DIESEL,  TECHO PANORAMICO, AIRE CLIMATIZADO, CAMARA DE RETROCESO, SENSORES DE ESTACIONAMIENTOS DELANTEROS Y TRASEROS, CLIMATIZADOR BI ZONA, 6 AIR BAG, LLANTAS, NEBLINEROS, CONTROL CRUCERO, PANTALLA TACTIL CON CAR PLAY, RECIBIMOS VEHICULOS EN PARTE DE PAGO, ",
+        "cost": 30885,
+        "currency": "USD",
+        "imgSrc": "img/auto-3-1.png",
+        "soldCount": 15
+    },
+    {
         "name": "Fiat Way",
         "description": "La versión de Fiat que brinda confort y a un precio accesible.",
         "cost": 14500,
