@@ -58,20 +58,18 @@ function showListaProduct(){
             ((maximoCount == undefined) || (maximoCount != undefined && parseInt(product.cost) <= maximoCount))){
 
         ListaDeProduct += `
-    <div class="col-md-4" >
+    <div class="col-md-4">
+    <div class="card-deck">
         <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
                     <img src="` + product.imgSrc + `" alt="` + product.description + `" class="bd-placeholder-img card-img-top">
                     <h3 class="m-3">`+ product.name + `</h3>
                     <div class="card-body">
-                    <p class="card-text">` + product.description + `</p>
-                    <div class="text-right">
-                        <h4> `+ product.currency +` `+ product.cost +`</h4>
-                    </div>
-                    <div class="card-footer">
-                    <small class="text-muted">` + product.soldCount + ` vendidos</small>
+                    <div>
+                        <p style=" text-align: right;"> `+ product.currency +` `+ product.cost +`</p> <p class="text-muted" style="text-align: right;">` + product.soldCount + `</p>
                     </div>
                     </div>
             </a>
+        </div>
         </div>
 
             `
