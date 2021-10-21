@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Terex Grúa Pluma RT130 alto tonelaje 2011",
+        "description": "Tipo Vehículo : MAQUINA INDUSTRIAL, Año : 2011, Marca : TEREX, Modelo : RT 130, Color : BLANCO",
+        "cost": 12850000,
+        "currency": "USD",
+        "soldCount": 14,
+        "category": "Maquinas",
+        "images": [
+            "img/MA1-2.png",
+            "img/MA1-3.png",
+            "img/MA1-4.png" 
+        ],
+        "relatedProducts": [1, 3]
+    },
+    {
+        "name": "2011 Komatsu WA 380-6 WA380-6",
+        "description": "VENTA DIRECTA Ubicanos en Batuco, Lampa. Horario Lunes a Viernes de 9:00 - 18:00 / Sábados PREVIA COORDINACION 9:00 - 13:00 Hrs Maquina con Documentos Consultas al +569 4597 4989 / +569 9822 3373 - 22 553 9358 VISITAS PREVIA COORDINACION. Aceptamos tarjeta de crédito y gestionamos crédito TANNER con previa evaluación.",
+        "cost": 2500000,
+        "currency": "USD",
+        "soldCount": 34,
+        "category": "Maquinas",
+        "images": [
+            "img/MA2-2.png",
+            "img/MA2-3.png",
+            "img/MA2-4.png" 
+        ],
+        "relatedProducts": [4, 2]
+    },
+    {
+        "name": "2006 John Deere 7710",
+        "description": "John Deere Tractor Tipo 7720  ; Año de construcción: 2006, 9.325 horas de motor ; sistema hidráulico delantero, eje delantero con resorte , Aire acondicionado, Sistema de aire comprimido, Neumáticos: 600/70 R 30 delantero; 710/70 R 42 trasero; Autotrac con receptor y pantalla - Activación SF 1; Transmisión autopower renovada a las 7.200 horas de motor; Varias partes renovadas en los últimos  años, Máquina muy bien mantenida",
+        "cost": 560000,
+        "currency": "USD",
+        "soldCount": 8,
+        "category": "Maquinas",
+        "images": [
+            "img/MA3-2.png",
+            "img/MA3-3.png",
+            "img/MA3-4.png" 
+        ],
+        "relatedProducts": [3, 5]
+    }
+]

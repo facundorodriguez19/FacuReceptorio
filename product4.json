@@ -1,0 +1,44 @@
+[
+    {
+        "name": "2020 Toyota Tundra 5.7 SR5 High Auto 4WD",
+        "description": "Modelo Limited se puede facturar Realmente impecable, tapiz de cuero, techo top de línea, todas sus mantenciones en Toyota crédito recibimos vehículo aceptamos tarjetas bancarias, Automotriz Movitrack Membrillar 386 Curico",
+        "cost": 37980,
+        "currency": "USD",
+        "soldCount": 14,
+        "category": "Buses",
+        "images": [
+            "img/4X1-1.png",
+            "img/4X1-3.png",
+            "img/4X1-4.png" 
+        ],
+        "relatedProducts": [1, 3]
+    },
+    {
+        "name": "2019 Mitsubishi L200 2.4 TD Katana CD CR",
+        "description": "Aire acondicionado, airbags, control crucero, cierre centralizado, dos llaves. Neumáticos originales, llantas, rueda repuesto. Muy poco kilometraje (27.300 Km)!! ",
+        "cost": 19990,
+        "currency": "USD",
+        "soldCount": 34,
+        "category": "Buses",
+        "images": [
+            "img/4X2-2.png",
+            "img/4X2-3.png",
+            "img/4X2-4.png" 
+        ],
+        "relatedProducts": [4, 2]
+    },
+    {
+        "name": "2000 Jeep Cherokee",
+        "description": "Suspensión Rouch country   Levante , desplazadores americanos , magnaflow ,  pisos de calce perfecto, focos led americanos,  Mantenciones al día en concesionario  Jeep. su interior está igual que nuevo sin desgaste alguno ,funciona al 100% ",
+        "cost": 14990,
+        "currency": "USD",
+        "soldCount": 8,
+        "category": "Buses",
+        "images": [
+            "img/4X3-2.png",
+            "img/4X3-3.png",
+            "img/4X3-4.png" 
+        ],
+        "relatedProducts": [3, 5]
+    }
+]

@@ -16,6 +16,48 @@
     "relatedProducts": [1, 3]
 },
 {
+    "name": "2016 Renault FLUENCE FLUENCE AUTENTIQUE 1.6",
+    "description": "Tenemos más de 1400 vehículos en stock, con Crédito hasta 48 meses - recibimos tu auto en parte de pago.",
+    "cost": 75400,
+    "currency": "USD",
+    "soldCount": 34,
+    "category": "Autos",
+    "images": [
+        "img/A1-1.png",
+        "img/A1-2.png",
+        "img/A1-3.png" 
+    ],
+    "relatedProducts": [4, 2]
+},
+{
+    "name": "2021 Citroën C5 AIRCROSS Diesel 1.5 Automatico Full",
+    "description": "Espectacular Nuevo Modelo SUV Automático Diésel Máximo Equipo y Economía  Financiamiento Directo",
+    "cost": 22990,
+    "currency": "USD",
+    "soldCount": 8,
+    "category": "Autos",
+    "images": [
+        "img/A2-2.png",
+        "img/A2-3.png",
+        "img/A2-4.png" 
+    ],
+    "relatedProducts": [3, 5]
+},
+{
+    "name": "110 Peugeot 2008 Vehículos",
+    "description": "AUTOMATICO DIESEL,  TECHO PANORAMICO, AIRE CLIMATIZADO, CAMARA DE RETROCESO, SENSORES DE ESTACIONAMIENTOS DELANTEROS Y TRASEROS, CLIMATIZADOR BI ZONA, 6 AIR BAG, LLANTAS, NEBLINEROS, CONTROL CRUCERO, PANTALLA TACTIL CON CAR PLAY, RECIBIMOS VEHICULOS EN PARTE DE PAGO, ",
+    "cost": 30885,
+    "currency": "USD",
+    "soldCount": 15,
+    "category": "Autos",
+    "images": [
+        "img/A3-2.png",
+        "img/A3-3.png",
+        "img/A3-4.png" 
+    ],
+    "relatedProducts": [7, 9]
+},
+{
     "name": "Fiat Way",
     "description": "La versión de Fiat que brinda confort y a un precio accesible.",
     "cost": 14500,
@@ -25,9 +67,11 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [2, 5]
 },
 {
     "name": "Suzuki Celerio",
@@ -39,9 +83,11 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [6, 3]
 },
 {
     "name": "Peugeot 208",
@@ -53,9 +99,11 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [11, 2]
 },
 {
     "name": "Honda Civic",
@@ -67,9 +115,11 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [6, 1]
 },
 {
     "name": "Honda CR-V",
@@ -81,9 +131,11 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [7, 3]
 },
 {
     "name": "BMW Serie 3",
@@ -95,9 +147,11 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [8, 4]
 },
 {
     "name": "Nissan Leaf",
@@ -109,8 +163,10 @@
     "images": [
         "img/prod1.jpg",
         "img/prod1_1.jpg",
-        "img/prod1_2.jpg"
+        "img/prod1_2.jpg",
+        "img/prod1_3.jpg",
+        "img/prod1_4.jpg"
     ],
-    "relatedProducts": [1, 3]
+    "relatedProducts": [9, 8]
 }
 ]

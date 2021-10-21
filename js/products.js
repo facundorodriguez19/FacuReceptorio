@@ -58,24 +58,57 @@ function showListaProduct(){
             ((maximoCount == undefined) || (maximoCount != undefined && parseInt(product.cost) <= maximoCount))){
 
         ListaDeProduct += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="${product.imgSrc}"  alt=" ${product.description}" class="img-thumbnail bd-placeholder-img card-img-top">
+    <div class="col-md-4" >
+        <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                    <img src="` + product.imgSrc + `" alt="` + product.description + `" class="bd-placeholder-img card-img-top">
+                    <h3 class="m-3">`+ product.name + `</h3>
+                    <div class="card-body">
+                    <p class="card-text">` + product.description + `</p>
+                    <div class="text-right">
+                        <h4> `+ product.currency +` `+ product.cost +`</h4>
                     </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">${product.name}</h4> 
-                            <small class="text-muted">${product.soldCount}</small>
-                        </div>
-                        <p class="mb-1">${product.description}</p>
-                        <div>
-                        <h5 class="mb-1">${product.cost} ${product.currency}</h5>
-                        </div>
-                    </div>       
-                </div>
+                    <div class="card-footer">
+                    <small class="text-muted">` + product.soldCount + ` vendidos</small>
+                    </div>
+                    </div>
             </a>
+        </div>
+
             `
+/*
+                 
+
+
+<a href="product-info.html" class="list-group-item list-group-item-action">  
+            <div class="col-md-4">
+                        <div class="card" style="width: 18rem;"> 
+                            <div class="card-body">
+                            <img class="card-img-top" src="${product.imgSrc}" alt="Card image cap">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.description}</p>
+                         <h5 class="mb-1">${product.cost} ${product.currency}</h5>
+                    </div>
+                 </div>
+            </div>  
+        </a>
+
+
+            <img src="${product.imgSrc}"  alt=" ${product.description}" class="img-thumbnail bd-placeholder-img card-img-top">
+            </div>
+         <div class="col">
+            <div class="d-flex w-100 justify-content-between">
+                <h4 class="mb-1">${product.name}</h4> 
+                <small class="text-muted">${product.soldCount}</small>
+                </div>
+                <p class="mb-1">${product.description}</p>
+                <div>
+                
+            </div>
+        </div>  
+*/
+
+
+
       }
     document.getElementById("product-list-container").innerHTML = ListaDeProduct;
     }
