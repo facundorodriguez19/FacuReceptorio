@@ -47,7 +47,7 @@
         <div class="dropdown-menu dropdown-menu-right">
           <a class="dropdown-item" href="my-profile.html" type="button">Mi Perfil</a>
           <a class="dropdown-item" href="cart.html" type="text">Mi Carrito</a>
-          <a class="dropdown-item" href="index.html" type="text">Cerrar Secion</a>
+          <a class="dropdown-item" href="index.html" type="text">Cerrar Sesiòn</a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
       <div class="dropdown-menu dropdown-menu-right">
         <a class="dropdown-item" href="my-profile.html" type="button">Mi Perfil</a>
         <a class="dropdown-item" href="cart.html" type="text">Mi Carrito</a>
-        <a class="dropdown-item" href="index.html" type="text">Cerrar Secion</a>
+        <a class="dropdown-item" href="index.html" type="text">Cerrar Sesiòn</a>
       </div>
     </div>
   </div>
@@ -87,12 +87,35 @@
     </div>
   </nav>
   <div class="container">
-      <img src="" alt="" srcset="">
-      Nombre y apellido
-      edad
-      e-mail
-      telefono de contacto
-  </div>
+
+    <div class="text-center p-4">
+      <h2 style="margin-top: 2vw;">Mi Perfil</h2>
+    </div>
+            <div class="container rounded bg-white mt-5 mb-5">
+              <div class="row">
+                  <div class="col-md-3 border-right">
+                      <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img id="foto_perfil" class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"></div>
+                  </div>
+                  <div class="col-md-5 border-right">
+                      <div class="p-3 py-5">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                              <h4 class="text-right">Profile Settings</h4>
+                          </div>
+                          <div class="row mt-2">
+                              <div class="col-md-6"><label class="labels">Nombre</label><input style="text-align: left !important;" id="nombre_Perfil"  type="text" class="form-control" value=""></div>
+                              <div class="col-md-6"><label class="labels">Apellido</label><input style="text-align: left !important;" id="apellido_Perfil" type="text" class="form-control" value="" ></div>
+                          </div>
+                          <div class="row mt-3">
+                              <div class="col-md-12"><label class="labels">Segundo Nombre</label><input style="text-align: left !important;" id="nombreSegundo_Perfil" type="text" class="form-control" value=""></div>
+                              <div class="col-md-12"><label class="labels">Segundo Apellido</label><input style="text-align: left !important;" id="apellidoSegundo_Perfil" type="text" class="form-control"  value=""></div>
+                              <div class="col-md-12"><label class="labels">Telefono</label><input style="text-align: left !important;" type="number" id="telefono" class="form-control"  value=""></div>
+                              <div class="col-md-12"><label class="labels">Edad</label><input style="text-align: left !important;" type="number" id="edad"  class="form-control"  value=""></div>
+                              <div class="col-md-12"><label class="labels">Email ID</label><input style="text-align: left !important;"  id="email" type="text" class="form-control" value=""></div>
+                          </div>
+                          <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" onclick="guardarPefil()">Save Profile</button></div>
+                      </div>
+                      
+                  </div>
   <footer class="text-abajo bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

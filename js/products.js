@@ -10,6 +10,7 @@ var minimoCount = undefined;
 var maximoCount = undefined;
 
 function sortProduct(criterio, arreglo) {
+    // funcion de orden por costo
     let resultado = [];
     if(criterio === Orden_ASC_BY_Cost){
         resultado = arreglo.sort(function(x, y) {
@@ -49,7 +50,7 @@ function sortProduct(criterio, arreglo) {
 }
 
 function showListaProduct(){
-
+// Muestro los productos
     let ListaDeProduct = "";
     for(let i = 0; i < arraycurrentProduct.length; i++){
         let product = arraycurrentProduct[i];
@@ -58,60 +59,24 @@ function showListaProduct(){
             ((maximoCount == undefined) || (maximoCount != undefined && parseInt(product.cost) <= maximoCount))){
 
         ListaDeProduct += `
-    <div class="col-md-4">
+    <div class="col-md-6 col-lg-4">
     <div class="card-deck">
         <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
                     <img src="` + product.imgSrc + `" alt="` + product.description + `" class="bd-placeholder-img card-img-top">
-                    <h3 class="m-3">`+ product.name + `</h3>
-                    <div class="card-body">
-                    <div>
-                        <p style=" text-align: right;"> `+ product.currency +` `+ product.cost +`</p> <p class="text-muted" style="text-align: right;">` + product.soldCount + `</p>
-                    </div>
-                    </div>
+                    <h3 class="m-3" style="font-size: 23px ;">`+ product.name + `</h3>
+                    <p class="card-text"  style="font-size: 14px ; margin-left: 10px;">${product.description}</p>
+                    <h4 class="m-3" style=" text-align: left; color: darkblue; font-size: 15px ;"> `+ product.currency +` `+ product.cost +`</h4> 
             </a>
         </div>
         </div>
 
             `
-/*
-                 
-
-
-<a href="product-info.html" class="list-group-item list-group-item-action">  
-            <div class="col-md-4">
-                        <div class="card" style="width: 18rem;"> 
-                            <div class="card-body">
-                            <img class="card-img-top" src="${product.imgSrc}" alt="Card image cap">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">${product.description}</p>
-                         <h5 class="mb-1">${product.cost} ${product.currency}</h5>
-                    </div>
-                 </div>
-            </div>  
-        </a>
-
-
-            <img src="${product.imgSrc}"  alt=" ${product.description}" class="img-thumbnail bd-placeholder-img card-img-top">
-            </div>
-         <div class="col">
-            <div class="d-flex w-100 justify-content-between">
-                <h4 class="mb-1">${product.name}</h4> 
-                <small class="text-muted">${product.soldCount}</small>
-                </div>
-                <p class="mb-1">${product.description}</p>
-                <div>
-                
-            </div>
-        </div>  
-*/
-
-
-
       }
     document.getElementById("product-list-container").innerHTML = ListaDeProduct;
     }
 }
 function sortYshowProductos(sortCriterio, productArray){
+    //funcion para juntar array con criterio
     currentSortCriterio = sortCriterio;
     
     if(productArray != undefined){
@@ -126,6 +91,7 @@ function sortYshowProductos(sortCriterio, productArray){
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
+    //documento DOM
     let urlProducts = CATEGORY_PRODUCTS + localStorage.getItem("category") + ".json";
     getJSONData(urlProducts).then(function(resultObj){ 
         if (resultObj.status === "ok"){
@@ -156,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 
     document.getElementById("rangoFiltroCount").addEventListener("click", function(){
+        // rangos de filtro, tanto maximo como minimo
 
         minimoCount = document.getElementById("rangoFiltroMinimoCount").value;
         maximoCount = document.getElementById("rangoFiltroMaximoCount").value;

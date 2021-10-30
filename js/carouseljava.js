@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', function(){
+	//Funcion para carusel del home.html
 	new Glider(document.querySelector('.carousel__lista'), {
 		slidesToShow: 1,
 		slidesToScroll: 1,

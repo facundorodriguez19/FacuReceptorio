@@ -313,7 +313,7 @@ a.custom-card:hover {
   border-radius: 50px;
 }
 .text-muted{
-  background: white;
+  margin-top: -8.4vw;
 }
 .text-abajo{
   background: white;
@@ -480,6 +480,12 @@ a.custom-card:hover {
     input:focus {
     border: 2px solid #0087F7;
     box-shadow: none;
+    }
+    .inputs_perfil{
+      background-color: white !important;
+      text-align: left !important;
+      border: 0.4px solid rgb(117, 117, 117) !important;
+      border-radius: 0px !important;
     }
     
     .boton {

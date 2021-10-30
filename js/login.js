@@ -2,7 +2,7 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 function validar(){
-
+//funcion para validar datos del login
     let nombre = document.getElementById("nombre").value;
     let pass = document.getElementById("pw").value;
     localStorage.setItem("user", nombre);

@@ -6,6 +6,7 @@ var arrayCommits = [];
 var commitarray = [];
 
 function motrarRelacionados(lista){
+  //funcion que muestra los productos relacionados
   let html = "";
   for(let i = 0; i< lista.length; i++){
     let relacionado = lista[i];
@@ -24,7 +25,7 @@ function motrarRelacionados(lista){
   }
 
 function showimagesProduct(arreglo){
-
+// funcion que muestra las imagenes de los productos
     let listaProductInfo = "";
     for (let index = 0; index < arreglo.length; index++) {
         let imageSrc = arreglo[index];
@@ -39,7 +40,7 @@ function showimagesProduct(arreglo){
     
 }
 document.addEventListener("DOMContentLoaded", function(e){
-        
+        //documento DOM y muestra de carcateristicas de productos
         getJSONData(PRODUCTS_URL).then(respuesta1 =>{
             if (respuesta1.status === "ok") {
               listadeProductos = respuesta1.data;
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 function commitesProduct(){
         
-      
+      // funcion para los comentarios
        
     let listaCommits = "";
     for(let i = 0; i < commitarray.length; i++){
@@ -109,6 +110,7 @@ var HTML = "";
 }
 
 function formatDate() {
+  //funciom para mostrar la fecha 
   let date = new Date();
   let formateDate = date.getDate().toString().padStart(2,'0') + "/"
   + (date.getMonth() +1).toString().padStart(2,'0') +"/"+ date.getFullYear().toString()
@@ -118,6 +120,7 @@ function formatDate() {
 }
 
 function saveComment() {
+  // funcion para guardar los comentarios
   let comment = {
     message: document.getElementById("textarea").value,
     completeDate: formatDate(),
@@ -130,6 +133,7 @@ function saveComment() {
 }
 
 function sStars(stars) {
+  //funcion de estrellas
   
   let number = parseInt(stars);
   let html = "";
@@ -144,6 +148,7 @@ function sStars(stars) {
     return html;
   }
 function showCommit() {
+  //funcion para mostrar los comentarios
   let html = "";
   for (let i = arrayCommits.length - 1; i >= 0; i--) {
     let comment = arrayCommits[i];
@@ -161,6 +166,7 @@ document.getElementById("formulario").reset();
 
 
 document.addEventListener("DOMContentLoaded", function(e){
+  //docuemnto DOM
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
             commitarray = resultObj.data;
@@ -172,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 
 // -------------------------------------------
+//POPUP
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
 	overlay = document.getElementById('overlay'),
 	popup = document.getElementById('popup'),
@@ -187,7 +194,8 @@ btnCerrarPopup.addEventListener('click', function(e){
 	overlay.classList.remove('active');
 	popup.classList.remove('active');
 });
-
+//---------------------------------------------------------
+//Carusel 
 
 const $simpleCarousel = document.querySelector('.js-carousel--simple');
 

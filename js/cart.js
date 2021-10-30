@@ -4,9 +4,9 @@ let sumaTotal;
 
 
 function upProductSubTotal(i) {
+    // funcion  para calcular el subtotal del precio
     let cantidad = parseInt(document.getElementById("number"+i).value);
     let precioProduct = parseInt(document.getElementById("precio"+i).innerText);
-
     let subTotal = precioProduct * cantidad;
 
     document.getElementById("subTotal"+i).innerHTML = subTotal;
@@ -16,6 +16,7 @@ function upProductSubTotal(i) {
 }
 
 function TotalPrecio(){
+    //funcion para calcular el total de los subtotales
     let sumaTotal = 0;
   for(let i = 0; i < listaProductCarrito.articles.length ;i++){
     sumaTotal += parseFloat(document.getElementById(`subTotal${i}`).innerHTML);
@@ -28,6 +29,7 @@ function TotalPrecio(){
 
 
 function showCarrito(array) {
+    //funcion para mostrar los productos del carrito
     let html ="";
     for (let i = 0; i < array.length; i++) {
         let article = array[i];
@@ -50,6 +52,7 @@ function showCarrito(array) {
 
 
 document.addEventListener("DOMContentLoaded", function(e){
+    //documento DOM
     getJSONData("https://japdevdep.github.io/ecommerce-api/cart/654.json").then(resultado=>{
         if (resultado.status === "ok") {
             listaProductCarrito = resultado.data;
