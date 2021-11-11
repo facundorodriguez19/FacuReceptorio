@@ -33,7 +33,7 @@
   <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="cart">
   <nav class="site-header fixed-top-nav py-1 bg-black-nav d-none d-lg-block">  
     <div class="container d-flex flex-column flex-md-row justify-content-between"> 
       <a class="py-2 d-none d-md-inline-block" href="home.html"><img src="../FacuReceptorio/img/Logo.png" class="logo_inicio" alt=""></a>
@@ -104,90 +104,152 @@
         
       </div>
       <div class="container">
+        <form action="" id="cart-info">
         <h3>Metodos de Envio:</h3>
         <p><strong>Direccion:</strong></p>
-        <input type="text" placeholder="calle">
-        <input type="text" placeholder="Numero">
-        <input type="text" placeholder="Esquina">
-        <p><strong>Pais:</strong></p>
-        <input type="text" placeholder="Pais">
-        <p><strong>Tipo de envio:</strong></p>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label style="margin-left: 8vw;" class="form-check-label" for="exampleRadios1">
-            Premium(2-5 dias) 
-          </label>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label >Calle:</label>
+            <input type="text" class="form-control" id="calle" placeholder="" value="" >
+            <div class="invalid-feedback">
+              Ingresa un Calle
+            </div>
+          </div>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label style="margin-left: 8vw;" class="form-check-label" for="exampleRadios2">
-            Express(5-8 dias)
-          </label>
-        </div><div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label style="margin-left: 8vw;" class="form-check-label" for="exampleRadios1">
-            Standard(12 a 15 dias)
-          </label>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Numero:</label>
+            <input type="number" class="form-control" id="numero" placeholder="" value="" >
+            <div class="invalid-feedback">
+              Ingresa un Numero de Puerta
+            </div>
+          </div>
         </div>
-
-        <button type="button" style="margin-top: 2vw; border-radius: 5px; " class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Forma de PAGO
-        </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Forma de Pago</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Nombre de Usuario:
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-              </div>
-              <div class="modal-body">
-                Tipo:
-                <div class="input-group mb-3">
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected >Elije una Opcion</option>
-                    <option value="1">Tarjeta de Credito</option>
-                    <option value="2">Tarjeta de Devito</option>
-                    <option value="3">Efectivo</option>
-                  </select>
-                </div>
-              </div>
-              <div class="modal-body">
-                Codigo de Seguridad:
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputZip">
-                </div>
-              </div>
-              <div class="modal-body">
-                Fecha del pago:<input  type="date" name="fecha">
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <a href="cart.html" type="button" class="btn btn-primary">Guardar Cambios</a>
-              </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label >Esquina:</label>
+            <input type="text" class="form-control" id="esquina" placeholder="" value="" >
+            <div class="invalid-feedback">
+              Ingresa una Esquina
             </div>
           </div>
         </div>
         
+        <p><strong>Pais:</strong></p>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Ciudad:</label>
+            <input type="text" class="form-control" id="pais" placeholder="" value="" >
+            <div class="invalid-feedback">
+              Ingrese su Pais
+              </div>
+          </div>
+        </div>
+        <div class="alert fade" role="alert" id="alertResult">
+          <span id="resultSpan"></span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+        <p><strong>Tipo de envio:</strong></p>
+        
+        <div class="form-check d-flex cart-input">
+          <input  class="form-check-input d-flex " type="radio" name="exampleRadios" id="exampleRadios1" value="option1" required>
+          <label  class="form-check-label d-flex" for="exampleRadios1">
+            Premium(2-5 dias) 
+          </label>
+        </div>
+        <div class="form-check d-flex cart-input">
+          <input class="form-check-input d-flex" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" required>
+          <label  class="form-check-label d-flex" for="exampleRadios2">
+            Express(5-8 dias)
+          </label>
+        </div>
+        <div class="form-check d-flex cart-input">
+          <input class="form-check-input d-flex" style="display: inline-block;" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked required>
+          <label  class="form-check-label d-flex" for="exampleRadios3">
+            Standard(12 a 15 dias)
+          </label>
+        </div>
 
-
-        <a class="boton" style="margin-left: 0vw;
-        margin-top: 2vw; text-align: center;" type="button" href="cart.html">Realizar Envio</a>
         
 
-      </div>
+      
+        <!-- 
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input name="publicationType" type="radio" id="exampleRadios1" class="custom-control-input" checked="" required="">
+            <label class="custom-control-label" for="goldradio">Gold (13%)</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input name="publicationType" type="radio"  id="exampleRadios2" class="custom-control-input" required="">
+            <label class="custom-control-label" for="premiumradio">Premium (7%)</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input name="publicationType" type="radio" id="exampleRadios3" class="custom-control-input" required="">
+            <label class="custom-control-label" for="standardradio">Estándar (3%)</label>
+          </div>
+        </div>
+        -->
+        <button type="button" style="margin-top: 2vw; border-radius: 5px; " class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Forma de PAGO
+        </button>
+        
+      <button type="submit" class="boton">Realizar Envio</button>
+    </form>
 
-
+    <form action="" id="cart-info2">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Forma de Pago</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label >Nombre:</label>
+                  <input type="text" class="form-control" id="nombre-modal" placeholder="" value="" >
+                  <div class="invalid-feedback">
+                    Ingresa un su Nombre
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="modal-body">
+              Tipo:
+              <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect01">    
+                  <option value="1">Tarjeta de Credito</option>
+                  <option value="2">Tarjeta de Devito</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label >Codigo de Seguridad:</label>
+                  <input type="text" class="form-control" id="codigo-seguridad" placeholder="" value="" >
+                  <div class="invalid-feedback">
+                    Ingresa su Codigo de Seguridad
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+              Fecha del pago:<input  type="date" name="fecha">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar Cambios</a>
+            </div>
+          </form>
+          </div>
 
 
   <div id="spinner-wrapper">

@@ -1,6 +1,7 @@
 const CATEGORIES_URL ="https://facundorodriguez19.github.io/FacuReceptorio/jsonCategorias.json";
  //"https://japdevdep.github.io/ecommerce-api/category/all.json"
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
+const GUARDAR_DATOS = "https://facundorodriguez19.github.io/FacuReceptorio/jsonGuardarModal.json"
 const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
 const PRODUCTS_URL = "https://facundorodriguez19.github.io/FacuReceptorio/jsonProducts.json";
 //"https://japdevdep.github.io/ecommerce-api/product/all.json";

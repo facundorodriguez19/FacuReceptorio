@@ -8,6 +8,9 @@
 body{
   background: white;
 }
+.cart .cart-input input {
+  width: 35px !important;
+}
 .py-5{
   background: white;
 }
@@ -312,11 +315,11 @@ a.custom-card:hover {
   display: block;
   border-radius: 50px;
 }
-.text-muted{
-  margin-top: -8.4vw;
-}
 .text-abajo{
   background: white;
+}
+.form-check-input {
+  position: relative !important; 
 }
 
 /* burbujas */
