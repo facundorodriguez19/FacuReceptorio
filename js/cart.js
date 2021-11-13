@@ -1,11 +1,9 @@
 let listaProductCarrito = [];
+let costoEnvio;
 let sumaTotal;
 let tipodeEnvio = 0.05;
 var cartForm =  document.getElementById("cart-info");
-var cartForm2 = document.getElementById("cart-info2");
-let mensaje_Guardado = "As guardado todos los datos"
-let SUCCESS_MSG = "¡Se ha realizado la publicación con éxito! :)";
-let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
+
 
 function upProductSubTotal(i) {
     // funcion  para calcular el subtotal del precio
@@ -16,42 +14,51 @@ function upProductSubTotal(i) {
         precioProduct *= 40
     }
     let subTotal = precioProduct * cantidad;
-    document.getElementById("subTotal"+i).innerHTML = subTotal;
-
+    document.getElementById("subTotal"+i).innerHTML = subTotal +" "+ "UYU" ;
     TotalPrecio();
+    toTalCarrito();
 
 }
 function costoDeEnvio(){
-    sumaTotal = sumaTotal * (1 + tipodeEnvio);
+   costoEnvio = sumaTotal * tipodeEnvio;
+   document.getElementById("costo_envio").innerHTML =" "+  "$" +  costoEnvio.toFixed(0);
 }
 
 function TotalPrecio(){
     //funcion para calcular el total de los subtotales 
-   
     sumaTotal = 0;
-  for(let i = 0; i < listaProductCarrito.articles.length ;i++){  
+  for(let i = 0; i < listaProductCarrito.length ;i++){  
     let suBtotal = parseFloat(document.getElementById(`subTotal${i}`).innerHTML);
     sumaTotal += suBtotal;
   }
+  
+  document.getElementById('total').innerHTML =" "+ "$" +  sumaTotal.toFixed(0); 
   costoDeEnvio();
-  document.getElementById('total').innerHTML = "$" + " " + sumaTotal.toFixed(2); 
+}
 
+function toTalCarrito() {
+    let totalFinal = sumaTotal + costoEnvio
+    document.getElementById("sumaTotal").innerHTML =" "+ "$" + totalFinal;
 }
 
 function eliminarArticulo(indice) {
-    if (listaProductCarrito.length > 0) {
+for (let index = 0; index < listaProductCarrito.length; index++) {
+    let cant = document.getElementById("number"+ index).value;
+    listaProductCarrito[index].count = parseInt(cant);
+}
         listaProductCarrito.splice(indice, 1);
-        showCarrito(listaProductCarrito);
-    }
+        showCarrito();
+        costoDeEnvio();
+        toTalCarrito();
 }
 
 
 
-function showCarrito(array) {
+function showCarrito() {
     //funcion para mostrar los productos del carrito   
     let html ="";
-    for (let i = 0; i < array.length; i++) {
-        let article = array[i];
+    for (let i = 0; i < listaProductCarrito.length; i++) {
+        let article = listaProductCarrito[i];
         
         html +=`
             <tr>
@@ -68,14 +75,13 @@ function showCarrito(array) {
                 let algo = article.unitCost*article.count;
                 html += `${algo}`+" UYU"+`</p></td>`
             }
-        html +=`<td class="align-middle"><button class="btn btn-danger" onclick="eliminarArticulo(${i});">Eliminar</button></td></tr>`
+        html +=`<td class="align-middle"><button type="button" class="btn btn-danger" onclick="eliminarArticulo(${i});">Eliminar</button></td></tr>`
     }
 
     document.getElementById("carrito").innerHTML = html;
-    
+    TotalPrecio();
+    toTalCarrito();
 }
-
-
 
 
 
@@ -87,21 +93,27 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     gold.addEventListener("click", function() {
         tipodeEnvio = 0.05;
+        costoDeEnvio();
+        toTalCarrito();
         TotalPrecio();
     });
     estandar.addEventListener("click", function() {
         tipodeEnvio =  0.07;
+        costoDeEnvio();
+        toTalCarrito();
         TotalPrecio();
     });
     premium.addEventListener("click", function() {
         tipodeEnvio = 0.15;
+        costoDeEnvio();
+        toTalCarrito();
         TotalPrecio();
     });
     //documento DOM
     getJSONData("https://japdevdep.github.io/ecommerce-api/cart/654.json").then(resultado=>{
         if (resultado.status === "ok") {
-            listaProductCarrito = resultado.data;
-            showCarrito(listaProductCarrito.articles);
+            listaProductCarrito = resultado.data.articles;
+            showCarrito();
             TotalPrecio();
         }
   
@@ -113,7 +125,8 @@ document.addEventListener("DOMContentLoaded", function(e){
         let cartNumeroInput = document.getElementById("numero");
         let cartEsquinaInput = document.getElementById("esquina");
         let cartPaisInput = document.getElementById("pais");
-     
+        let cartNombreInput = document.getElementById("nombre-modal");
+        let cartCodigoSeguridadInput = document.getElementById("codigo-seguridad");
         let infoMissing = false;
     
     
@@ -121,7 +134,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         cartNumeroInput.classList.remove('is-invalid');
         cartEsquinaInput.classList.remove('is-invalid');
         cartPaisInput.classList.remove('is-invalid');
-     
+        cartNombreInput.classList.remove('is-invalid');
+        cartCodigoSeguridadInput.classList.remove('is-invalid');
+
     
         if (cartCalleInput.value === "")
             {
@@ -144,12 +159,21 @@ document.addEventListener("DOMContentLoaded", function(e){
                 cartPaisInput.classList.add('is-invalid');
                 infoMissing = true;
             }
+            if (cartNombreInput.value === "")
+            {
+                cartNombreInput.classList.add('is-invalid');
+                infoMissing = true;
+            }
+            if (cartCodigoSeguridadInput.value === "")
+            {
+                cartCodigoSeguridadInput.classList.add('is-invalid');
+                infoMissing = true;
+            }
             
     
             if(!infoMissing)
             {
              
-    
                 getJSONData(PUBLISH_PRODUCT_URL).then(function(resultObj){
                     let mensajeHtml = document.getElementById("resultSpan");
                     let mensajeInput = "";
@@ -174,55 +198,6 @@ document.addEventListener("DOMContentLoaded", function(e){
             if (e.preventDefault) e.preventDefault();
                 return false;
         });
-
-        cartForm2.addEventListener("submit", function(e) {
-            let cartNombreInput = document.getElementById("nombre-modal");
-            let cartCodigoSeguridadInput = document.getElementById("codigo-seguridad");
-            let infoMissing = false;
-
-            cartNombreInput.classList.remove('is-invalid');
-            cartCodigoSeguridadInput.classList.remove('is-invalid');
-
-            
-            if (cartNombreInput.value === "")
-            {
-                cartNombreInput.classList.add('is-invalid');
-                infoMissing = true;
-            }
-            if (cartCodigoSeguridadInput.value === "")
-            {
-                cartCodigoSeguridadInput.classList.add('is-invalid');
-                infoMissing = true;
-            }
-            if(!infoMissing)
-            {
-             
-    
-                getJSONData( GUARDAR_DATOS).then(function(resultObj){
-                    let mensajeHtml = document.getElementById("resultSpan");
-                    let mensajeInput = "";
-        
-                    if (resultObj.status === 'ok')
-                    {
-                        mensajeInput = resultObj.data.msg;
-                        document.getElementById("alertResult").classList.add('alert-success');
-                    }
-                    else if (resultObj.status === 'error')
-                    {
-                        mensajeInput = ERROR_MSG;
-                        document.getElementById("alertResult").classList.add('alert-danger');
-                    }
-        
-                    mensajeHtml.innerHTML = mensajeInput;
-                    document.getElementById("alertResult").classList.add("show");
-                });
-            }
-    
-           
-            if (e.preventDefault) e.preventDefault();
-                return false;
-            
-        })
 
 
 });
