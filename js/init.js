@@ -1,15 +1,13 @@
-const CATEGORIES_URL ="https://facundorodriguez19.github.io/FacuReceptorio/jsonCategorias.json";
- //"https://japdevdep.github.io/ecommerce-api/category/all.json"
-const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
-const GUARDAR_DATOS = "https://facundorodriguez19.github.io/FacuReceptorio/jsonGuardarModal.json"
-const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
-const PRODUCTS_URL = "https://facundorodriguez19.github.io/FacuReceptorio/jsonProducts.json";
-//"https://japdevdep.github.io/ecommerce-api/product/all.json";
-const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
-const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
-const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
-const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
+const CATEGORIES_URL ="http://localhost:4000/categorias"
+const PUBLISH_PRODUCT_URL = "http://localhost:4000/products_Publish";
+const CATEGORY_INFO_URL = "http://localhost:4000/category_info";
+const PRODUCTS_URL = "http://localhost:4000/products";
+const PRODUCT_INFO_URL = "http://localhost:4000/products_info";
+const PRODUCT_INFO_COMMENTS_URL = "http://localhost:4000/products_info_comments_url";
+const CART_INFO_URL = "http://localhost:4000/cart_info_url";
+const CART_BUY_URL = "http://localhost:4000/cart_buy_url";
 let CATEGORY_PRODUCTS = "https://facundorodriguez19.github.io/FacuReceptorio/";
+
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }

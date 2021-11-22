@@ -4,6 +4,12 @@ var arrayInfoProduct = {};
 //--------------------
 var arrayCommits = [];
 var commitarray = [];
+var url = new URL('http://localhost:4000/products_info')
+
+var params = {id:localStorage.getItem("product")}
+
+url.search = new URLSearchParams(params).toString();
+
 
 function motrarRelacionados(lista){
   //funcion que muestra los productos relacionados
@@ -41,12 +47,13 @@ function showimagesProduct(arreglo){
 }
 document.addEventListener("DOMContentLoaded", function(e){
         //documento DOM y muestra de carcateristicas de productos
+
         getJSONData(PRODUCTS_URL).then(respuesta1 =>{
             if (respuesta1.status === "ok") {
               listadeProductos = respuesta1.data;
-        getJSONData(PRODUCT_INFO_URL).then(function(resultObj) {
-                if(resultObj.status === "ok"){
-                   arrayInfoProduct = resultObj.data;
+        fetch(url).then(function(resultObj) {
+                
+             arrayInfoProduct = resultObj.data;
                    
 
             let productNameHTML  = document.getElementById("productName");
@@ -66,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             
             showimagesProduct(arrayInfoProduct.images);
             motrarRelacionados(arrayInfoProduct.relatedProducts)
-            }
+            
         });
            
         }

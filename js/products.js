@@ -61,20 +61,30 @@ function showListaProduct(){
         ListaDeProduct += `
     <div class="col-md-6 col-lg-4">
     <div class="card-deck">
-        <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+            <div id="${i}" onclick='obtenerShowProductInfo(${i})' class="card mb-4 shadow-sm custom-card">
                     <img src="` + product.imgSrc + `" alt="` + product.description + `" class="bd-placeholder-img card-img-top">
                     <h3 class="m-3" style="font-size: 23px ;">`+ product.name + `</h3>
                     <p class="card-text"  style="font-size: 14px ; margin-left: 10px;">${product.description}</p>
                     <h4 class="m-3" style=" text-align: left; color: darkblue; font-size: 15px ;"> `+ product.currency +` `+ product.cost +`</h4> 
-            </a>
+            </div>
         </div>
-        </div>
+    </div>`
 
-            `
       }
     document.getElementById("product-list-container").innerHTML = ListaDeProduct;
     }
 }
+
+function obtenerShowProductInfo(id){
+    localStorage.setItem("product",id);
+    window.location.href="./product-info.html"
+}
+
+
+
+
+
+
 function sortYshowProductos(sortCriterio, productArray){
     //funcion para juntar array con criterio
     currentSortCriterio = sortCriterio;
