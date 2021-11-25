@@ -1,5 +1,6 @@
 [
     {
+        "id":0,
         "name": "2012 Chevrolet Camaro",
         "description": "Chevrolet Camaro 3.6 RS , 2012 , Automático , único dueño , Convertible , láminas transparentes para cuidado de pintura , llantas y neumáticos nuevos , magnaflow , muy bien cuidado.",
         "cost": 26500000,
@@ -7,6 +8,7 @@
         "imgSrc": "img/depo1-3.png"
     },
     {
+        "id":1,
         "name": "2022 Lotus Exige",
         "description": "GRAN VELODIDAD!!, llamar al contacto disponible",
         "cost": 125000,
@@ -14,6 +16,7 @@
         "imgSrc": "img/depo2-3.png"
     },
     {
+        "id":2,
         "name": "2022 Toyota Supra GR 3.0 AUT UNICO FULL EQUIPO",
         "description": "Minimizamos los riesgos según protocolo y podemos llevar el auto desinfectado a tu casa www.makina-autos.cl, mall puerta los trapenses of.533 (edificio clínica meds la dehesa ), jose alcalde delano 10581 exhibición nivel -5, pague con crédito o tarjetas",
         "cost": 86990000,

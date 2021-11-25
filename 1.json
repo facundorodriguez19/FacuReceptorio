@@ -1,5 +1,6 @@
 [
     {
+        "id":0,
         "name": "2013 Zhongtong Navigator",
         "description": "Buen estado,full equipo, Pintura nueva!! Opción crédito!!",
         "cost": 219111,
@@ -7,6 +8,7 @@
         "imgSrc": "img/buses1-2.png"
     },
     {
+        "id":1,
         "name": "2009 King Long Xmq",
         "description": "53 asientos reclinables normales, Aire, motor cummin 300 hp, Crédito directo!!",
         "cost": 12878934,
@@ -14,6 +16,7 @@
         "imgSrc": "img/buses2-3.png"
     },
     {
+        "id":2,
         "name": "2011 Marcopolo Paradiso 1800 DD Scania K-420",
         "description": "Tipo de Bus: Pullman Full, Nº Asiento:60, Semi Cama Kilometraje:2401042, Aire Acondicionado:Si, Calefacción:Si, Baño:Si, Separación de Cabina: Doble Piso Retardador:Si, Nº Puerta:3 ",
         "cost": 27989548,

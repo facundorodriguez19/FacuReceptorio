@@ -1,5 +1,6 @@
 [
     {
+        "id":0,
         "name": "2017 Forest River Salem",
         "description": "Automotora queirolo con mas de 40 años de experiencia, con el mayor stock en suv y 4x4",
         "cost": 35990000,
@@ -7,6 +8,7 @@
         "imgSrc": "img/casa-1-1.png"
     },
     {
+        "id":1,
         "name": "Mercedes-Benz Sprinter 2014",
         "description": "Motorhome americana  en perfecto estado, equipada al 100% con capacidad para 6 personas, frenos abs ars, traccion trasera, aire acondicionado control climatico, calefaccion central, caja de cambio automatica, control crucero, airbag piloto y copiloto, neblineros, baterias vehiculo y baterias servicio, horno, lavaplato, estractor cocina, cocina gas, radio con bluetooth, cama superior 2 per. ",
         "cost": 73900000,
@@ -14,6 +16,7 @@
         "imgSrc": "img/casa-2-2.png"
     },
     {
+        "id":2,
         "name": "Fiat Ducato 6 personas 2020",
         "description": "Motorhome Diesel Fiat Ducato para 6 personas modelo perfilado con cama elevadora electrica sobre el comedor año 2020 llegando fines de Diciembre,refrigerador calefaccion aire acondicionado de cabina,baño con ducha,agua caliente ",
         "cost": 55500000,
