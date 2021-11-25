@@ -1,9 +1,19 @@
 let listaProductCarrito = [];
+let totalFinal = 0;
 let costoEnvio;
 let sumaTotal;
 let tipodeEnvio = 0.05;
 var cartForm =  document.getElementById("cart-info");
-
+let datosCarito = {
+nombre:"",
+calle:"",
+numero:"",
+esquina:"",
+carrito:[],
+tipoEnvio:"",
+total:"",
+formaPago:[]
+};
 
 function upProductSubTotal(i) {
     // funcion  para calcular el subtotal del precio
@@ -37,7 +47,7 @@ function TotalPrecio(){
 }
 
 function toTalCarrito() {
-    let totalFinal = sumaTotal + costoEnvio
+     totalFinal = sumaTotal + costoEnvio
     document.getElementById("sumaTotal").innerHTML =" "+ "$" + totalFinal;
 }
 
@@ -87,6 +97,8 @@ function showCarrito() {
 
 
 document.addEventListener("DOMContentLoaded", function(e){
+
+
     gold     = document.getElementById("exampleRadios3");
     estandar = document.getElementById("exampleRadios2");
     premium  =  document.getElementById("exampleRadios1");
@@ -120,6 +132,9 @@ document.addEventListener("DOMContentLoaded", function(e){
     })
     
     cartForm.addEventListener("submit", function(e) {
+
+       
+
     
         let cartCalleInput = document.getElementById("calle");
         let cartNumeroInput = document.getElementById("numero");
@@ -193,12 +208,37 @@ document.addEventListener("DOMContentLoaded", function(e){
                     document.getElementById("alertResult").classList.add("show");
                 });
             }
-    
-           
-            if (e.preventDefault) e.preventDefault();
-                return false;
-        });
 
+        datosCarito.nombre = cartNombreInput.value;
+        datosCarito.calle = cartCalleInput.value;
+        datosCarito.numero = cartNumeroInput.value;
+        datosCarito.esquina = cartEsquinaInput.value;
+        datosCarito.formaPago = document.getElementById("inputGroupSelect01").value;
+        datosCarito.tipoEnvio = tipodeEnvio;
+        datosCarito.total = totalFinal;
+        datosCarito.carrito = listaProductCarrito;
+
+        fetch("http://localhost:4000/carrito_pepe",{
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(datosCarito), // data can be `string` or {object}!
+            headers:{
+              'Content-Type': 'application/json'
+            }
+          }).then(res=>console.log(res))
+       
+          if (e.preventDefault){
+            e.preventDefault();
+            return false;
+         } 
+          
+    });
+
+    
 
 });
 
+
+
+
+
+        

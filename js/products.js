@@ -61,7 +61,7 @@ function showListaProduct(){
         ListaDeProduct += `
     <div class="col-md-6 col-lg-4">
     <div class="card-deck">
-            <div id="${i}" onclick='obtenerShowProductInfo(${i})' class="card mb-4 shadow-sm custom-card">
+            <div id="${i}" onclick='obtenerShowProductInfo(${product.id})' class="card mb-4 shadow-sm custom-card">
                     <img src="` + product.imgSrc + `" alt="` + product.description + `" class="bd-placeholder-img card-img-top">
                     <h3 class="m-3" style="font-size: 23px ;">`+ product.name + `</h3>
                     <p class="card-text"  style="font-size: 14px ; margin-left: 10px;">${product.description}</p>

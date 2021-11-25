@@ -6,7 +6,7 @@ var arrayCommits = [];
 var commitarray = [];
 var url = new URL('http://localhost:4000/products_info')
 
-var params = {id:localStorage.getItem("product")}
+var params = {id:localStorage.getItem("product")+ "-" +localStorage.getItem("category")}
 
 url.search = new URLSearchParams(params).toString();
 
@@ -43,17 +43,35 @@ function showimagesProduct(arreglo){
             </div>
         </div> `                              
     }
-    
-}
+
+  }
+
+  function imagenesIlustrativas() {
+    let html = "";
+    document.getElementById("foto_Principal").src = arrayInfoProduct.images[0];
+    for (let i = 0; i < arrayInfoProduct.images.length; i++) {
+      const element = arrayInfoProduct.images[i];
+      
+      html+=`
+              <div class="c-carousel_slide"><img src="${element}" alt=""></div>
+      `
+      
+      
+    }
+    document.getElementById("carousel_info").innerHTML = html;
+  }
+
+
+
 document.addEventListener("DOMContentLoaded", function(e){
         //documento DOM y muestra de carcateristicas de productos
 
         getJSONData(PRODUCTS_URL).then(respuesta1 =>{
             if (respuesta1.status === "ok") {
               listadeProductos = respuesta1.data;
-        fetch(url).then(function(resultObj) {
+        getJSONData(url).then(function(resultObj) {
                 
-             arrayInfoProduct = resultObj.data;
+             arrayInfoProduct = resultObj.data[0];
                    
 
             let productNameHTML  = document.getElementById("productName");
@@ -73,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             
             showimagesProduct(arrayInfoProduct.images);
             motrarRelacionados(arrayInfoProduct.relatedProducts)
+            imagenesIlustrativas();
             
         });
            
