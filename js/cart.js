@@ -201,27 +201,25 @@ document.addEventListener("DOMContentLoaded", function(e) {
         }
 
         datosCarito.nombre = cartNombreInput.value;
-        //datosCarito.calle = cartCalleInput.value;
-        //datosCarito.numero = cartNumeroInput.value;
-        //datosCarito.esquina = cartEsquinaInput.value;
-        //datosCarito.formaPago = document.getElementById("inputGroupSelect01").value;
-        //datosCarito.tipoEnvio = tipodeEnvio;
-        //datosCarito.total = totalFinal;
-        //datosCarito.carrito = listaProductCarrito;
+        datosCarito.calle = cartCalleInput.value;
+        datosCarito.numero = cartNumeroInput.value;
+        datosCarito.esquina = cartEsquinaInput.value;
+        datosCarito.formaPago = document.getElementById("inputGroupSelect01").value;
+        datosCarito.tipoEnvio = tipodeEnvio;
+        datosCarito.total = totalFinal;
+        datosCarito.carrito = listaProductCarrito;
+
         datos = JSON.stringify(datosCarito);
-        console.log(datos);
         fetch("http://localhost:4000/carrito_pepe", {
 
             method: 'POST', // or 'PUT'
-            body: "hola", // data can be `string` or {object}!
+            body: datos, // data can be `string` or {object}!
             headers: {
                 'Content-Type': 'application/json'
             }
         }).then(res => console.log(res))
 
-
     });
-
 
 
 });
