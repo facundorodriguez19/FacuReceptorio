@@ -13,7 +13,7 @@ searchBar.addEventListener('keyup', (e) =>{
 
 const loadCharacters = async () =>{
     try{
-        const res = await fetch("http://hp-api.herokuapp.com/api/characters");
+        const res = await fetch("https://facundorodriguez19.github.io/FacuReceptorio/jsonCategorias.json");
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
     } catch(err){
